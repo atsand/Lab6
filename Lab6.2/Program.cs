@@ -47,14 +47,6 @@ namespace Lab6._2
 
             return vowels.Contains(c);
 
-            //foreach (char vowel in vowels)
-            //{
-            //    if (vowel==c)
-            //    {
-            //        return true;
-            //    }
-            //}
-            //return false;
         }
 
         //return index of first vowel as an int
@@ -77,7 +69,6 @@ namespace Lab6._2
         {
             input = input.Trim(' ');
             char[] endPunctuations = { '!', '%', ',', '.', '?', ';', '"' };
-            //char[] allPunctuations = {
             string punctuationHold = " ", last = input.Last().ToString();
             Regex rgx = new Regex("[A-Za-z]");
             
@@ -106,6 +97,7 @@ namespace Lab6._2
             }
         }
 
+        //checks if the individual work contains a symbol or number
         public static bool ContainsSymbolNumber(string input)
         {
             Regex rgx = new Regex("[A-Za-z']");
@@ -118,6 +110,7 @@ namespace Lab6._2
             }
             return false;
         }
+     
         //ask if user would like to translate something else
         public static void TranslateAgain()
         {

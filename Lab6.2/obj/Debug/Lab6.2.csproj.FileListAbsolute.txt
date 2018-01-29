@@ -5,3 +5,10 @@ C:\Users\GC Student\Desktop\Grand Circus\Lab6.2\Lab6.2\obj\Debug\Lab6.2.csprojRe
 C:\Users\GC Student\Desktop\Grand Circus\Lab6.2\Lab6.2\obj\Debug\Lab6.2.csproj.CoreCompileInputs.cache
 C:\Users\GC Student\Desktop\Grand Circus\Lab6.2\Lab6.2\obj\Debug\Lab6.2.exe
 C:\Users\GC Student\Desktop\Grand Circus\Lab6.2\Lab6.2\obj\Debug\Lab6.2.pdb
+C:\Users\GOAT\Desktop\Grand Circus\Lab6\Lab6.2\bin\Debug\Lab6.2.exe.config
+C:\Users\GOAT\Desktop\Grand Circus\Lab6\Lab6.2\bin\Debug\Lab6.2.exe
+C:\Users\GOAT\Desktop\Grand Circus\Lab6\Lab6.2\bin\Debug\Lab6.2.pdb
+C:\Users\GOAT\Desktop\Grand Circus\Lab6\Lab6.2\obj\Debug\Lab6.2.csprojResolveAssemblyReference.cache
+C:\Users\GOAT\Desktop\Grand Circus\Lab6\Lab6.2\obj\Debug\Lab6.2.csproj.CoreCompileInputs.cache
+C:\Users\GOAT\Desktop\Grand Circus\Lab6\Lab6.2\obj\Debug\Lab6.2.exe
+C:\Users\GOAT\Desktop\Grand Circus\Lab6\Lab6.2\obj\Debug\Lab6.2.pdb

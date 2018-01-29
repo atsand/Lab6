@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace Lab6._2
 {
@@ -27,6 +28,7 @@ namespace Lab6._2
             else
             {
                 input = input.Trim();
+                input = Regex.Replace(input, @"\s+", " ");
                 string[] sentenceArray = input.Split(' ');
                 foreach (string word in sentenceArray)
                 {
@@ -43,20 +45,16 @@ namespace Lab6._2
 
             char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
 
-            foreach (char vowel in vowels)
-            {
-                if (vowel==c)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
+            return vowels.Contains(c);
 
-        //if the first letter is a vowel, run this to print
-        public static void FirstIsVowelPrint(string input)
-        {
-            Console.Write(input + "way ");
+            //foreach (char vowel in vowels)
+            //{
+            //    if (vowel==c)
+            //    {
+            //        return true;
+            //    }
+            //}
+            //return false;
         }
 
         //return index of first vowel as an int
@@ -74,22 +72,52 @@ namespace Lab6._2
             return wordArray.Length;
         }
 
-        //translate word not starting in vowel into Pig Latin and print
+        //translate word into Pig Latin and print
         public static void Translate(string input)
         {
-            string lowerInput = input.ToLower();
-            if (FirstIsVowel(lowerInput[0]))
+            input = input.Trim(' ');
+            char[] endPunctuations = { '!', '%', ',', '.', '?', ';', '"' };
+            //char[] allPunctuations = {
+            string punctuationHold = " ", last = input.Last().ToString();
+            Regex rgx = new Regex("[A-Za-z]");
+            
+
+            if (!rgx.IsMatch(last))
             {
-                FirstIsVowelPrint(input);
+                punctuationHold = (input[input.Length - 1].ToString() + " ");
+                input = input.Substring(0, input.Length - 1);
+            }
+
+            string lowerInput = input.ToLower();
+
+            if (ContainsSymbolNumber(input))
+            {
+                Console.WriteLine(input +punctuationHold.ToString());
+            }
+            else if(FirstIsVowel(lowerInput[0]))
+            {
+                Console.Write(input + "way" + punctuationHold.ToString());
                 return;
             }
             else
             {
                 int index = FindVowel(lowerInput);
-                Console.Write(input.Substring(index) + input.Substring(0, index) + "ay ");
+                Console.Write(input.Substring(index) + input.Substring(0, index) + "ay" + punctuationHold.ToString());
             }
         }
 
+        public static bool ContainsSymbolNumber(string input)
+        {
+            Regex rgx = new Regex("[A-Za-z']");
+            foreach (char x in input)
+            {
+                if (!rgx.IsMatch(x.ToString()))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         //ask if user would like to translate something else
         public static void TranslateAgain()
         {
